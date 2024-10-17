@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-str = "Hello, this is a string"
-print(str*3)
+str = "Holberton School"
+print(str * 3)
 print(str[:9]
