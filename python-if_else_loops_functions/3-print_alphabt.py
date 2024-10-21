@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for ascii_code in range(97, 123):
-    if(ascii_code == 101) or (ascii_code == 113):
+for n in range(97, 123):
+    if(n == 101) or (n == 113):
         continue
-        print(chr(ascii_code).format(), end="")
+        print(chr(n).format(), end="")
