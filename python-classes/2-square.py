@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""defines a square"""
+"""defines a square """
 
 
-class square:
+class Square:
     '''
     defines a square
          has aprivate instance att: size
