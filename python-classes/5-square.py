@@ -2,7 +2,8 @@
 """defines a square """
 
 Class Square:
-    """ defines a square """
+    """ defines a square
+    has a private instance att: size """
 
     def __init__(self, size=0):
         """ initialises a square with size """
