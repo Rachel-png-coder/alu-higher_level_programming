@@ -2,21 +2,23 @@
 """defines a square """
 
 Class Square:
-    """ defines a square
-    has a private instance att: size """
+    """
+    Defines a square
+    Has a private instance att: size
+    """
 
     def __init__(self, size=0):
-        """ initialises a square with size """
+        ''' initialises a square with size '''
         self.__size = size
 
      @property
      def size(self):
-         """ getter method """
+         ''' getter method '''
          return self.__size
         
      @size.setter
      def size(self, value):
-         """ setter method """
+         ''' setter method '''
 
          if not isinstance(value, int):
                 raise TypeError("size must be an integer")
@@ -25,11 +27,11 @@ Class Square:
                 self.__size = size
 
      def area(self):
-            """ Return the area of a square """
+            ''' Return the area of a square '''
             return(self.__size * self.__size)
 
      def my_print(self):
-            """ prints a square with the character # """
+            ''' prints a square with the character # '''
              if self.__size == 0:
                 print("")
              for x in range(self.__size):
