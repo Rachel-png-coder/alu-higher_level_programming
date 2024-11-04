@@ -5,7 +5,6 @@
 """
 
 
-
 class Rectangle:
     """
         rectangle with private instance attributes: 'width' & 'height'
