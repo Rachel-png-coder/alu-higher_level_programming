@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-""" defines a rectangle """
+# empty class rectangle that defines a square
+"""
+   defines a rectangle
+"""
+
 
 Class Rectangle:
-    """ a class named rectangle """
+    """
+    a class named rectangle
+    """
     pass
