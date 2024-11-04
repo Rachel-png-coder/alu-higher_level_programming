@@ -3,7 +3,7 @@
 
 
 Class Square:
-        """
+    """
     Creates a square.
     """
 
