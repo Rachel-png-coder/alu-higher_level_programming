@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""a class Student that defines a student by: (based on 10-student.py)"""
+""" class Student that defines a student by: (based on 10-student.py)"""
 
 
-class Students:
+class Student:
     """ Class to create student instances """
 
     def __init__(self, first_name, last_name, age):
