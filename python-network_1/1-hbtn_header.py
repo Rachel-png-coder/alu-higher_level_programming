@@ -8,7 +8,9 @@ import sys
 
 
 def main():
-""" Sends a request to a URL and displays the value """
+    """
+    Sends a request to a URL and displays the value
+    """
     if len(sys.argv) == 2:
         url = sys.argv[1]
         with urllib.request.urlopen(url) as response:
