@@ -5,8 +5,8 @@ import urllib.request
 
 
 def main():
-    """Fetches url and displays the body of the response"""
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
+    request = urllib.request.Request("https://intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as response:
         body = res.read()
         print("Body response:")
         print("\t- type: {}".format(type(body)))
