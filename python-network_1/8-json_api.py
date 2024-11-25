@@ -1,25 +1,23 @@
 #!/usr/bin/python3
 """
-Python script that sends a POST request
+A Python script that takes in a letter and sends a POST request
 """
+
 import requests
 import sys
 
 
 if __name__ == "__main__":
-    data = {'q': ""}
-
+    if len(sys.argv) == 1:
+        q = ""
+    else:
+        q = sys.argv[1]
+    response = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
     try:
-        data['q'] = sys.argv[1]
-    except:
-        pass
-
-    r = requests.post('http://0.0.0.0:5000/search_user', data)
-
-    try:
-        json_o = r.json()
-        if not json_o:
-            print("No result")
+        json_res = response.json()
+        if json_res:
+            print("[{}] {}".format(json_res.get("id"), json_res.get("name")))
         else:
-            print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
-    except:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
