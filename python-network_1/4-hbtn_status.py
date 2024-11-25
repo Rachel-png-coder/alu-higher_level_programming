@@ -10,4 +10,4 @@ def fetch_status():
     print(f"\t- content: {body}")
 
 if __name__ == "__main__":
-    fetch_status()
+    fetch_status
