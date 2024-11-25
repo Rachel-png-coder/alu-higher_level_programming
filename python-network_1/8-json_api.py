@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-Python script that takes in a letter and sends a POST request
+Python script that sends a POST request
 """
-
-import request
+import requests
 import sys
 
 
@@ -24,4 +23,3 @@ if __name__ == "__main__":
         else:
             print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
     except:
-        print("Not a valid JSON")
