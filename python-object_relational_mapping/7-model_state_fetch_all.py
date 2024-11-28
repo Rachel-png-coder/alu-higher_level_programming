@@ -2,22 +2,27 @@
 """
 a script that lists all State objects from the database hbtn_0e_6_usa
 """
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
 
 
-Base = declarative_base()
+import sys
+from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 
-class State(Base):
-    """
-    This class is mapped to the 'states' table in the MySQL database.
-    Attributes:
-        __tablename__ (str): The name of the corresponding database table.
-        id (int): The primary key for the 'states' table.
-        name (str): The name of the state.
-    """
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, unique=True,
-                autoincrement=True, nullable=False)
-    name = Column(String(128), nullable=False)
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+                        sys.argv[1], sys.argv[2], sys.argv[3]),
+                        pool_pre_ping=True
+                    )
+    Session = sessionmaker(bind=engine)
+    Base.metadata.create_all(engine)
+
+    session = Session()
+
+    states = session.query(State).order_by(State.id).all()
+
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+
+    session.close()
