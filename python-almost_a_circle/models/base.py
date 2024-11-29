@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # base.py
 # loading base
-"""the first class Base:"""
+"""Defines a base model class."""
 import json
 import csv
 import turtle
