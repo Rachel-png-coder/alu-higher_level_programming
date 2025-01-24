@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const args = process.argv.slice(2);
+
 function add (a, b) {
-  const result = a + b;
-  console.log(result);
+  console.log(parseInt(a) + parseInt(b));
 }
-add(Number(args[0]), Number(args[1]));
+
+add(process.argv[2], process.argv[3]);
