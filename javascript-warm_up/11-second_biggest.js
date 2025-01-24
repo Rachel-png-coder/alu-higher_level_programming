@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const args = process.argv.length;
-const num = [];
+const nm = [];
 switch (args) {
   case 2:
   case 3:
@@ -9,9 +9,9 @@ switch (args) {
 
   default:
     for (let i = 2; i < args; i++) {
-      num.push(process.argv[i]);
+      nm.push(process.argv[i]);
     }
-    num.sort((a, b) => b - a);
-    console.log(num[1]);
+    nm.sort((a, b) => b - a);
+    console.log(nm[1]);
     break;
 }
